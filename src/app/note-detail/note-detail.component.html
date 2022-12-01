@@ -1,0 +1,8 @@
+<div *ngIf="note">
+    <h2>{{ note.title }}</h2>
+    <div>id: {{ note.id }}</div>
+    <div>
+        <label for="note-title">Note's title: </label>
+        <input type="text" class="note name" [(ngModel)]="note.title" placeholder="title" >
+    </div>
+</div>
