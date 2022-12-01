@@ -1,0 +1,11 @@
+    <h2>My Notes</h2>
+    <ul class="notes">
+        <li *ngFor="let note of notes">
+            <button [class.selected]="note === selectedNote" type="primary" class="primary" (click)="onSelect(note)">
+                <span class="badge">{{ note.id }}</span>
+                <span class="title">{{ note.title }}</span>
+            </button>
+        </li>
+    </ul>
+    <app-note-detail [note]="selectedNote"></app-note-detail>
+    
